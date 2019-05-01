@@ -3,7 +3,7 @@
 
 // Belum jadi dipakai <= notifberkas=false;
 // Belum jadi dipakai <= loopcheck=true;
-// Varsi simple dulu ceritanya
+// Varsi simple dulu ceritanya biar pola nya terlihat jelas secara intuitif
 
 // Random untuk delay supaya terlihat lebih realistis dan untuk pembuktian callback
 var random = Math.random() * 5000 + 1000;
@@ -59,7 +59,7 @@ function notifInterview(callback){
     setTimeout(() => {
         console.log("7. HR notif ke Pelamar untuk interview dengan User");
         callback();
-    }, random);
+    }, 500);
 }
 
 //8 Pelamar datang ke User untuk interview
@@ -94,13 +94,14 @@ function pelamarBekerja(callback){
     }, random);
 }
 
+//12 Happy Ending Hore
 function happyEnding(){
     setTimeout(() => {
         console.log("12. Happy Ending! Usaha yang keras takkan menghianati hasil")
     }, random);
 }
 
-pelamarSubmit("CV ku",(data)=>{
+pelamarSubmit("CV syahiid",(data)=>{
     hrdMerespon(data, ()=>{
         pelamarDatang( ()=>{
             pelamarSerahkan( ()=>{
